@@ -1,0 +1,11 @@
+FROM prodaptimages/nodejsbase 
+WORKDIR /app
+COPY SampleNode/ /app/
+
+RUN npm install 
+
+EXPOSE 80 
+
+COPY supervisord.conf /etc/supervisor/
+COPY default /etc/nginx/sites-available/
+

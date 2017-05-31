@@ -1,6 +1,6 @@
 FROM prodaptimages/nodejsbase 
 WORKDIR /app
-COPY SampleNode/ /app/
+COPY ./ /app/
 
 RUN npm install 
 
